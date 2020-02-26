@@ -13,71 +13,76 @@ permalink: /about/
     </section>
     <section class="about-body">
       <ul class="contact-list">
-
- {% if site.weibo %}
+ 
+      {% if site.weibo %}
       <li class="weibo"><a href="https://weibo.com/{{site.weibo}}" target="_blank"><i class="iconfont icon-weibo-line" style="font-size:larger;"></i></a></li>
       {% else %}
+      <li class="weibo"><a href="https://weibo.com/yushiyang2010" target="_blank"><i class="iconfont icon-weibo-line" aria-hidden="true"></i></a></li>
       {% endif %}
 
       {% if site.bilibili %}
       <li class="bilibili"><a href="https://space.bilibili.com/{{site.bilibili}}" target="_blank"><i class="iconfont icon-bilibili-line" style="font-size:larger;"></i></a></li>
       {% else %}
+      <li class="bilibili"><a href="https://space.bilibili.com/10419858" target="_blank"><i class="icon-bilibili-line" aria-hidden="true"></i></a></li>
       {% endif %} 
 
 
-      {% if site.email %}
-        <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
+      {% if site.github %}
+        <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="iconfont icon-github-line" style="font-size:larger;" ></i></a></li>
       {% else %}
-        <li class="email"><a href="mailto:example.adam@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        <li class="github"><a href="http://github.com/artemsheludko" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
       {% endif %}
-
-      {% if site.phone %}
-        <li class="phone"><a href="tel:{{site.phone}}"><i class="fa fa-phone"></i></a></li>
-      {% else %}
-        <li class="phone"><a href="tel:044 825 5523"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
-      {% endif %}
-
+      
       {% if site.website %}
-        <li class="website"><a href="http://{{site.website}}" target="_blank"><i class="fa fa-globe"></i></a></li>
+        <li class="website"><a href="http://{{site.website}}" target="_blank"><i class="iconfont icon-global-line" style="font-size:larger"></i></a></li>
       {% else %}
         <li class="website"><a href="https://artemsheludko.github.io" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
       {% endif %}
 
-      {% if site.linkedin %}
+      {% if site.email %}
+        <li class="email"><a href="mailto:{{site.email}}"><i class="iconfont icon-mail-send-line" style="font-size:larger"></i></a></li>
+      {% else %}
+        <li class="email"><a href="mailto:example.adam@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+      {% endif %}
+<!-- 
+     {% if site.linkedin %}
         <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
       {% else %}
         <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
       {% endif %}
+-->
 
-      {% if site.github %}
-        <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
-      {% else %}
-        <li class="github"><a href="http://github.com/artemsheludko" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-      {% endif %}
-
-      {% if site.twitter %}
+ <!-- 
+    {% if site.twitter %}
         <li class="twitter"><a href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
       {% else %}
         <li class="twitter"><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       {% endif %}
+-->
 
-      {% if site.facebook %}
+<!-- 
+     {% if site.facebook %}
         <li class="facebook"><a href="https://facebook.com/{{site.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
       {% else %}
         <li class="facebook"><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
       {% endif %}
+-->
 
+<!--
       {% if site.instagram %}
         <li class="instagram"><a href="https://instagram.com/{{site.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
       {% else %}
         <li class="instagram"><a href="https://instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
       {% endif %}
+-->
 
+<!--
       {% if site.pinterest %}
         <li class="pinterest"><a href="https://pinterest.com/{{site.pinterest}}" target="_blank"><i class="fa fa-pinterest"></i></a></li>
       {% else %}
         <li class="pinterest"><a href="https://pinterest.com/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
       {% endif %}
+-->
       </ul>
     </section> <!-- End About Body-->
   </div> <!-- End About Container -->
