@@ -1,6 +1,7 @@
 <section class="comment-area">
   <div class="comment-wrapper">
     {% if site.discus_identifier %}
+
     <div id="disqus_thread" class="article-comments"></div>
     <script>
       (function() {
@@ -12,5 +13,25 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {% endif %}
+
+<!-- Gitalk 评论 start  -->
+  <div id="gitalk-container"></div>
+      <script type="text/javascript">
+      var title = location.pathname.substr(0, 50);//截取路径的前50个字符作为标识符
+      var gitalk = new Gitalk({
+
+      // gitalk的主要参数
+          clientID: ` 140ca42bcbb95a8eee72`,
+          clientSecret: `5a9947b703fb0395ed68392911c46645a6af0634`,
+          repo: `talk`,
+          owner: 'vilolin321',
+          admin: ['violin321'],
+          id: title,//因为这里不能超过50字符，所以做了处理，当超过50时自动截取前50
+     
+      });
+      gitalk.render('gitalk-container');
+      </script>
+  <!-- Gitalk end -->
+
   </div>
 </section> <!-- End Comment Area -->

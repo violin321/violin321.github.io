@@ -1,15 +1,15 @@
-title: My personal blog - Adam Neilson
-email: your-email@domain.com
+title: violin's blog
+email: violin@violin.site
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "m.violin.site" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings 作者设置
-author: 余师洋 # add your name
+author: violin@-@ # add your name
 author-pic: adam-face.jpg # 头像
 about-author: My name is Adam Neilson. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 2 years.
 
@@ -25,13 +25,13 @@ instagram: # 添加你的 Instagram ID
 pinterest: # 添加你的 Pinterest ID
 
 # Newsletter
-mailchimp: # Add your MailChimp form identifier.
+#mailchimp: # Add your MailChimp form identifier.
 
 # Disqus 评论
-discus_identifier: shiyangyu # Add your discus identifier
+#discus_identifier: mviolin # Add your discus identifier
 
 # Tracker 追踪
-analytics: # Google Analytics
+#analytics: # Google Analytics
 
 # Paginate
 paginate: 6
@@ -48,3 +48,4 @@ plugins:
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
+
