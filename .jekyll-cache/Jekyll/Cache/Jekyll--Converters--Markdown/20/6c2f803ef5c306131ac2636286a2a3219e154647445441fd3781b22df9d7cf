@@ -1,0 +1,111 @@
+I"�<p>使用rEFInd引导多系统启动 Windows 10、macOS 10.15.2（基于Open Core）、其他</p>
+
+<blockquote>
+  <p>软件版本：refind-bin-0.11.4</p>
+
+  <p>官网：http://www.rodsbooks.com/refind/</p>
+
+  <p>下载地址：https://sourceforge.net/projects/refind/</p>
+
+  <p>官方安装教程：http://www.rodsbooks.com/refind/installing.html</p>
+
+  <p>主题：<a href="https://evanpurkhiser.com/rEFInd-minimal/" target="_blank">rEFInd Minimal</a>  、<a href="https://github.com/kgoettler/ursamajor-rEFInd" target="_blank">ursamajor-rEFInd</a></p>
+
+  <p>主题标签： https://github.com/topics/refind-theme</p>
+
+  <p>项目地址：https://github.com/techysy/rEFInd</p>
+</blockquote>
+
+<ul>
+  <li><strong>EFI</strong> 文件夹结构图</li>
+</ul>
+
+<p><img src="/assets/img/refind/EFI.jpg" alt="EFI" /></p>
+
+<h3 id="项目文件说明">项目文件说明</h3>
+
+<ul>
+  <li>
+    <p>EFI     配置好的rEFInd 自用引导OC和WIN 使用minimal主题</p>
+  </li>
+  <li>
+    <p>refind-bin-0.11.4   官方版本 驱动和安装脚本</p>
+  </li>
+  <li>
+    <p>Screenshot   我的EFI 文件目录结构图</p>
+  </li>
+  <li>
+    <p>Themes    主题文件夹可自行放置在rEFInd目录下</p>
+  </li>
+</ul>
+
+<h3 id="安装refind">安装rEFInd</h3>
+
+<p><img src="/assets/img/refind/refind.jpg" alt="refind" /></p>
+
+<ul>
+  <li>
+    <p>自动安装</p>
+
+    <p>使用终端执行 <strong>refind-install</strong> 系统自动把文件拷贝到EFI文件夹下 并建立启动项，如果不认盘可能需要手动复制驱动文件 <strong>drivers_x64</strong> 如果存在多个EFI 引导盘 不确定回安装在哪一个</p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/refind/drivers.jpg" alt="drivers" /></p>
+<ul>
+  <li>
+    <p>手动安装</p>
+
+    <p>建议使用手动安装的方式，拷贝refind-bin-0.11.4下的refind到EFI目录（可使用Hackintool工具、mount命令挂载）下删掉多余的驱动比如aa64 arm处理器和其他32位处理器的驱动 只保留 <strong>drivers_x64</strong> 。最后使用BCD、EasyUEFI工具添加UEFI启动项。</p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/refind/UEFI.jpg" alt="uefi" /></p>
+
+<h3 id="配置-refindconf">配置 refind.conf</h3>
+
+<h4 id="注释或者删掉之前的代码参考refindconf-sample-去调整">注释或者删掉之前的代码，参考refind.conf-sample 去调整</h4>
+
+<h4 id="我的配置">我的配置：</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#选择等待时间
+
+timeout 3
+
+#屏蔽自动搜索Windows启动项和其他启动项文件夹
+ 
+dont_scan_files \EFI\Microsoft\Boot\bootmgfw.efi 
+    
+dont_scan_dirs /EFI/BOOT,/EFI/Microsoft,/EFI/OC
+
+#手动添加启动项并设置图标
+
+menuentry "Windows 10" {
+     
+volume "Windows 10"
+     
+icon \EFI\refind\themes\rEFInd-minimal\icons\os_win.png
+     
+loader \EFI\Microsoft\Boot\bootmgfw.efi 
+     
+}
+     
+menuentry "macOS 10.15.2" {
+     
+volume "macOS boot"
+     
+icon \EFI\refind\themes\rEFInd-minimal\icons\os_mac.png
+     
+loader \EFI\OC\OpenCore.efi 
+}
+
+#设置主题 我使用的minimal，也可以在GitHub找到其他的主题
+
+#放在 EFI/rEFInd/themes目录下 并指向主题配置文件
+
+include themes\rEFInd-minimal\theme.conf 
+
+#include themes\ursamajor-rEFInd\theme.conf
+</code></pre></div></div>
+
+:ET
