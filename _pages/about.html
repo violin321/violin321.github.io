@@ -13,6 +13,18 @@ permalink: /about/
     </section>
     <section class="about-body">
       <ul class="contact-list">
+
+ {% if site.weibo %}
+      <li class="weibo"><a href="https://weibo.com/{{site.weibo}}" target="_blank"><i class="iconfont icon-weibo-line" style="font-size:larger;"></i></a></li>
+      {% else %}
+      {% endif %}
+
+      {% if site.bilibili %}
+      <li class="bilibili"><a href="https://space.bilibili.com/{{site.bilibili}}" target="_blank"><i class="iconfont icon-bilibili-line" style="font-size:larger;"></i></a></li>
+      {% else %}
+      {% endif %} 
+
+
       {% if site.email %}
         <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
       {% else %}
