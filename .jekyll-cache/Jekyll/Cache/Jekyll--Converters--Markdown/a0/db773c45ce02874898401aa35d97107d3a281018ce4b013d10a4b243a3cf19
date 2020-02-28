@@ -1,0 +1,38 @@
+I"�<h2 id="jekyll-writer-test">jekyll writer test</h2>
+
+<p><img src="http://q6bqhj8q0.bkt.clouddn.com/JekyllWriter/JuniperPhoton  2020-02-15 12-00-00.jpg" alt="JuniperPhoton  2020-02-15 12-00-00" /></p>
+
+<h3 id="h3">h3</h3>
+
+<ul>
+  <li>hello world</li>
+</ul>
+
+<blockquote>
+  <p>life is <strong>beautiful</strong></p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+    <span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+
+    <span class="cp">&lt;?php
+    echo "Hello World!";
+    ?&gt;</span>
+
+    <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><a href="http://m.violin.site/music">听点音乐</a></p>
+:ET
