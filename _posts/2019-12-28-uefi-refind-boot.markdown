@@ -2,7 +2,7 @@
 layout: post
 title: rEFInd一个好用又好看的UEFI启动管理器
 date: 2019-12-28 20:00:00 +0800
-img: {{site.baseurl}}/assets/img/refind/rEFInd.jpg
+img: /assets/img/rEFInd.jpg
 tags: [MAC,野生技术协会]
 categories: 分享
 ---
