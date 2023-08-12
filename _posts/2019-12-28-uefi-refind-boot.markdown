@@ -61,15 +61,15 @@ categories: 分享
     #选择等待时间
     
     timeout 3
-
+    
     #屏蔽自动搜索Windows启动项和其他启动项文件夹
      
     dont_scan_files \EFI\Microsoft\Boot\bootmgfw.efi 
         
     dont_scan_dirs /EFI/BOOT,/EFI/Microsoft,/EFI/OC
-
+    
     #手动添加启动项并设置图标
-
+    
     menuentry "Windows 10" {
          
     volume "Windows 10"
@@ -88,13 +88,12 @@ categories: 分享
          
     loader \EFI\OC\OpenCore.efi 
     }
-
+    
     #设置主题 我使用的minimal，也可以在GitHub找到其他的主题
     
     #放在 EFI/rEFInd/themes目录下 并指向主题配置文件
-
+    
     include themes\rEFInd-minimal\theme.conf 
-
+    
     #include themes\ursamajor-rEFInd\theme.conf
-
 

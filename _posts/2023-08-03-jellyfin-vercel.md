@@ -28,4 +28,4 @@ img: http://img.violin.site/FhPw0t3CQy-YJk8IV8heDa34Yqa2
     </body>
     </html>
 {% endhighlight %}
-[听点音乐](http://m.violin.site/music)
+[听点音乐](https://blog.violin.site/music)
